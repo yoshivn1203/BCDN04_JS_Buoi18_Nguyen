@@ -8,14 +8,14 @@ themSo = () => {
 
 tinhTong = () => {
   let sum = 0;
-  for (i = 0; i < originalArray.length; i++)
+  for (let i = 0; i < originalArray.length; i++)
     originalArray[i] > 0 ? (sum += originalArray[i]) : sum;
   document.getElementById('SumSoDuong').innerHTML = `Tổng số dương: ${sum}`;
 };
 
 DemSoDuong = () => {
   let count = 0;
-  for (i = 0; i < originalArray.length; i++)
+  for (let i = 0; i < originalArray.length; i++)
     originalArray[i] > 0 ? count++ : count;
   document.getElementById('DemSoDuong').innerHTML = `Số dương: ${count}`;
 };
@@ -26,7 +26,7 @@ timMin = () => {
 
 timMinDuong = () => {
   let posArray = [];
-  for (i = 0; i < originalArray.length; i++) {
+  for (let i = 0; i < originalArray.length; i++) {
     originalArray[i] > 0 ? posArray.push(originalArray[i]) : posArray;
   }
   let result =
@@ -36,7 +36,7 @@ timMinDuong = () => {
 
 timSoChan = () => {
   let evenNumber = -1; // trả về -1 khi không có số chẵn
-  for (i = 0; i < originalArray.length; i++) {
+  for (let i = 0; i < originalArray.length; i++) {
     originalArray[i] % 2 == 0 ? (evenNumber = originalArray[i]) : evenNumber;
   }
   document.getElementById('timSoChan').innerHTML = evenNumber;
@@ -57,10 +57,27 @@ doiChoBai6 = () => {
 };
 
 sapXep = () => {
-  for (i = 0; i < originalArray.length; i++)
-    for (u = 0; u < originalArray.length - 1; u++)
+  for (let i = 0; i < originalArray.length; i++)
+    for (let u = 0; u < originalArray.length - 1; u++)
       if (originalArray[u] > originalArray[u + 1]) {
         doiCho(u, u + 1);
       }
   document.getElementById('sapXep').innerHTML = originalArray;
+};
+
+checkSnt = (num) => {
+  for (let i = 2, s = Math.sqrt(num); i <= s; i++)
+    if (num % i === 0) return false;
+  return num > 1;
+};
+
+timSnt = () => {
+  let snt = -1; // trả về -1 khi không có số nguyên tố
+  for (let i = 0; i < originalArray.length; i++) {
+    if (checkSnt(originalArray[i])) {
+      snt = originalArray[i];
+      break;
+    }
+  }
+  document.getElementById('timSnt').innerHTML = snt;
 };
