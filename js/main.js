@@ -41,3 +41,17 @@ timSoChan = () => {
   }
   document.getElementById('timSoChan').innerHTML = evenNumber;
 };
+
+doiCho = (a, b) => {
+  tempNumber = originalArray[a];
+  originalArray[a] = originalArray[b];
+  originalArray[b] = tempNumber;
+};
+
+doiChoBai6 = () => {
+  let vitri1 = document.getElementById('viTri1').value,
+    vitri2 = document.getElementById('viTri2').value;
+  doiCho(vitri1, vitri2);
+
+  document.getElementById('doiChoBai6').innerHTML = originalArray;
+};
