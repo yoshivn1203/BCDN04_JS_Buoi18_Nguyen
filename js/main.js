@@ -20,6 +20,14 @@ DemSoDuong = () => {
   document.getElementById('DemSoDuong').innerHTML = `Số dương: ${count}`;
 };
 
-TimMin = () => {
-  document.getElementById('TimMin').innerHTML = Math.min(...originalArray);
+timMin = () => {
+  document.getElementById('timMin').innerHTML = Math.min(...originalArray);
+};
+
+timMinDuong = () => {
+  let posArray = [];
+  for (i = 0; i < originalArray.length; i++) {
+    originalArray[i] > 0 ? posArray.push(originalArray[i]) : posArray;
+  }
+  document.getElementById('timMinDuong').innerHTML = Math.min(...posArray);
 };
