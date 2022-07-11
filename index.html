@@ -25,7 +25,7 @@
         </div>
         <div class="col-12 col-lg-6">
           <div class="alert alert-primary">
-            <span id="txtArray">&#8205</span>
+            <span id="originalArray">&#8205</span>
           </div>
         </div>
       </div>
@@ -34,17 +34,24 @@
           <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
               aria-expanded="true" aria-controls="collapseOne">
-              Accordion Item #1
+              1. Tổng các số dương trong mảng.
             </button>
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse
-              plugin adds the appropriate classes that we use to style each element. These classes control the overall
-              appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
-              CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-              <code>.accordion-body</code>, though the transition does limit overflow.
+              <div class="row gy-3 my-3">
+                <div class="col-12 col-lg-2">
+                  <button class="btn btn-success me-1 mb-1" type="button" onclick="tinhTong()">
+                    Tính Tổng
+                  </button>
+                </div>
+                <div class="col-12 col-lg-6">
+                  <div class="alert alert-primary">
+                    <span id="SumSoDuong">&#8205</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
