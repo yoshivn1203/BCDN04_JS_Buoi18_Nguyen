@@ -55,3 +55,12 @@ doiChoBai6 = () => {
 
   document.getElementById('doiChoBai6').innerHTML = originalArray;
 };
+
+sapXep = () => {
+  for (i = 0; i < originalArray.length; i++)
+    for (u = 0; u < originalArray.length - 1; u++)
+      if (originalArray[u] > originalArray[u + 1]) {
+        doiCho(u, u + 1);
+      }
+  document.getElementById('sapXep').innerHTML = originalArray;
+};
