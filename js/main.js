@@ -29,5 +29,15 @@ timMinDuong = () => {
   for (i = 0; i < originalArray.length; i++) {
     originalArray[i] > 0 ? posArray.push(originalArray[i]) : posArray;
   }
-  document.getElementById('timMinDuong').innerHTML = Math.min(...posArray);
+  let result =
+    posArray.length > 0 ? Math.min(...posArray) : 'Không có số dương';
+  document.getElementById('timMinDuong').innerHTML = result;
+};
+
+timSoChan = () => {
+  let evenNumber = -1; // trả về -1 khi không có số chẵn
+  for (i = 0; i < originalArray.length; i++) {
+    originalArray[i] % 2 == 0 ? (evenNumber = originalArray[i]) : evenNumber;
+  }
+  document.getElementById('timSoChan').innerHTML = evenNumber;
 };
