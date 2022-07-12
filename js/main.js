@@ -97,3 +97,16 @@ demSoNguyen = () => {
   }
   document.getElementById('demSoNguyen').innerHTML = count;
 };
+
+soSanhAmDuong = () => {
+  let countPos = 0,
+    countNeg = 0;
+  for (let i = 0; i < originalArray.length; i++)
+    originalArray[i] > 0 ? countPos++ : originalArray[i] < 0 && countNeg++;
+  document.getElementById('soSanhAmDuong').innerHTML =
+    countPos > countNeg
+      ? 'Số dương > Số âm'
+      : countPos < countNeg
+      ? 'Số âm > Số dương'
+      : 'Số âm = Số dương';
+};
