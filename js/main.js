@@ -81,3 +81,19 @@ timSnt = () => {
   }
   document.getElementById('timSnt').innerHTML = snt;
 };
+
+let secondArray = [];
+
+themSoThuc = () => {
+  let number = Number(document.getElementById('inputNum2').value);
+  secondArray.push(number);
+  document.getElementById('themSoThuc').innerHTML = secondArray;
+};
+
+demSoNguyen = () => {
+  let count = 0;
+  for (let i = 0; i < secondArray.length; i++) {
+    Number.isInteger(secondArray[i]) ? count++ : count;
+  }
+  document.getElementById('demSoNguyen').innerHTML = count;
+};
