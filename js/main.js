@@ -13,7 +13,7 @@ tinhTong = () => {
   document.getElementById('SumSoDuong').innerHTML = `Tổng số dương: ${sum}`;
 };
 
-DemSoDuong = () => {
+demSoDuong = () => {
   let count = 0;
   for (let i = 0; i < originalArray.length; i++)
     originalArray[i] > 0 ? count++ : count;
